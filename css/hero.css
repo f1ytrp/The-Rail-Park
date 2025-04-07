@@ -1,0 +1,292 @@
+.hero{
+    padding-top: 2em;
+    padding-bottom: 15em;
+}
+
+.hero-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8rem;
+    line-height: 120px;
+    font-weight: 700;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: -10000;
+}
+
+
+.carousel-image{
+    width: 48vw;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-top: -6em;
+    z-index: 10;
+    transition: none;
+    opacity: 0;
+    display: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.swipe-indicator {
+    display: none;
+}
+
+.carousel-image.show {
+    display: block;
+    opacity: 1;
+}
+
+.arc-exit {
+    animation: arcExit 0.9s ease forwards;
+    transform-origin: bottom right;
+}
+  
+.arc-enter {
+    animation: arcEnter 0.9s ease forwards;
+    transform-origin: bottom right;
+}
+  
+@keyframes arcExit {
+    to {
+      transform: translate(-300px, 200px) rotate(-12deg);
+      opacity: 0;
+    }
+}
+  
+@keyframes arcEnter {
+    from {
+      transform: translate(-200px, 300px) rotate(12deg);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+}
+
+
+.parallax-layer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 0 5vw;
+    text-align: right;
+}
+
+.hero-para{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    z-index: 100;
+    text-align: left;
+    width: 20vw;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: flex-end;
+    margin-bottom: 2em;
+    transform: translateY(30px);
+    animation: slideUpHero 0.5s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideUpHero {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.hero-para h3 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+    transition: opacity 0.4s ease-in-out;
+}
+  
+.hero-para p {
+    color: rgb(27, 202, 27);
+    font-size: 1.5rem;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.open-badge {
+    position: absolute;
+    right: 5vw;
+    top: 25vw;
+    width: 100px;
+    z-index: 100;
+}
+
+.open-badge.hidden {
+    display: none;
+}
+
+.left-arrow, .right-arrow{
+    width: 50px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+
+
+.noble-entrance{
+    position: relative;
+    padding-left: 10%;
+}
+
+.visit-heading{
+    position: absolute;
+    top: -90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+    left: 60vw;
+    text-align: right;
+}
+
+.noble-img{
+    width: 35%;
+    border-radius: 10px;
+}
+
+.noble-address{
+    width: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5em;
+    position: absolute;
+    left: 45%;
+    top: 25%;
+}
+
+.noble-address span{
+    font-size: 1.5rem;
+}
+
+.noble-address h1{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.noble-direction{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 65%;
+    top: 28%;
+}
+
+.wheel-icon{
+    width: 80px;
+}
+
+.wheel-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.tooltip-text {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+    background: #00d65f;
+    color: white;
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+  
+.tooltip-text::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #00d65f;
+}
+  
+  
+.wheel-tooltip:hover .tooltip-text {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    pointer-events: auto;
+}
+  
+
+
+
+.section2{
+    padding-top: 5em;
+}
+
+.callowhill{
+    position: relative;
+    min-height: 450px;
+}
+
+.callow-img{
+    width: 35%;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10%;
+    overflow: hidden;
+}
+
+.callow-address{
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5em;
+    position: absolute;
+    left: 17%;
+    top: 25%;
+}
+
+.callow-address span{
+    font-size: 1.5rem;
+}
+
+.callow-address h1{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.callow-direction{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 39%;
+    top: 28%;
+}
+
+
+.stair-icon{
+    width: 80px;
+}

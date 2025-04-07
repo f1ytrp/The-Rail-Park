@@ -1,0 +1,158 @@
+.greenway-section{
+    position: relative;
+    line-height: 1.2;
+    padding-left: 10%;
+}
+
+.greenway-section h1{
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+}
+
+.highlight-text{
+    color: rgb(32, 212, 32);
+    z-index: 2;
+    cursor: pointer;
+    position: relative;
+}
+
+.hover-video{
+    position: relative;
+    display: inline-block;
+}
+
+.video-preview {
+    position: fixed;
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 10;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+}
+
+.subtext {
+    font-size: 1.8rem;
+    color: #111;
+    margin-top: 2rem;
+}
+
+.video-preview {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+  
+.hover-video:hover .video-preview {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+
+
+.middle-section{
+    padding-top: 10em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.viaduct{
+    display: flex;
+    gap: 2em;
+    margin-left: 2em;
+}
+
+.viaduct-img{
+    width: 30vw;
+    border-radius: 5px;
+    transition: transform 0.1s ease-out;
+}
+
+.viaduct-text{
+    padding-top: 2%;
+}
+
+.viaduct-text h1{
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.thecut{
+    padding-top: 25em;
+    margin-right: 3em;
+    max-width: 36vw;
+}
+
+.thecut-img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    margin-bottom: -140px;
+    object-fit: cover;
+}
+
+.thecut h1{
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.main-text{
+    width: 40vw;
+    margin-left: 8em;
+    margin-top: -5em;
+}
+
+.main-text span{
+    font-size: clamp(0.8rem, 3vw, 2rem);
+    font-weight: 300;
+}
+
+.main-text p{
+    padding-top: 1em;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.main-text p:hover{
+    cursor: pointer;
+    color: rgb(32, 212, 32);
+    transition: 0.2s;
+}
+
+.tunnel{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.tunnel-img{
+    width: 15vw;
+    border-radius: 5px;
+    margin-bottom: -500px;
+    position: relative;
+}
+
+.tunnel-text{
+    padding-top: 8%;
+    max-width: 15vw;
+}
+
+.tunnel-text h1{
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.tunnel-text span{
+    font-size: 1rem;
+    font-weight: 300;
+}
