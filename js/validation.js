@@ -32,8 +32,8 @@ function animateVideo() {
   currentX += (mouseX - currentX) * 0.15;
   currentY += (mouseY - currentY) * 0.15;
 
-  video.style.left = `${currentX}px`;
-  video.style.top = `${currentY}px`;
+  video.style.left = `${currentX - video.offsetWidth / 2}px`;
+  video.style.top = `${currentY - video.offsetHeight / 2}px`;
 
   requestAnimationFrame(animateVideo);
 }

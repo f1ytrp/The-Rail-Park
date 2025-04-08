@@ -2,7 +2,7 @@
     display: flex;
     gap: 8em;
     margin-left: 2em;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Armin-Grotesk';
     padding-top: 150px;
     padding-bottom: 8em;
 }
@@ -104,7 +104,7 @@
     background-color: #0CEE72;
     padding-top: 6em;
     padding-bottom: 6em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     align-items: center;
     text-align: center;
 }
@@ -121,7 +121,7 @@
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    font-family: sans-serif;
+    font-family: 'Armin-Grotesk';
 }
 
 .email-container input {
@@ -299,4 +299,36 @@
 
 .footer-responsive{
     display: none;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.socialimg img{
+    width: 40px;
+    cursor: pointer;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.socialimg img:hover{
+    transition: 0.2s ease-in;
+}
+.socialimg{
+    display: flex;
+    gap: 1em;
+}
+
+.instagram:hover{
+    filter: invert(19%) sepia(64%) saturate(6799%) hue-rotate(320deg) brightness(89%) contrast(114%);
+}
+
+.twitter:hover{
+    filter: invert(50%) sepia(32%) saturate(1316%) hue-rotate(161deg) brightness(100%) contrast(96%);
+}
+
+.facebook:hover{
+    filter: invert(37%) sepia(95%) saturate(3051%) hue-rotate(202deg) brightness(97%) contrast(96%);
 }

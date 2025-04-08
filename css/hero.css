@@ -4,7 +4,7 @@
 }
 
 .hero-text{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk-semibold';
     font-size: 8rem;
     line-height: 120px;
     font-weight: 700;
@@ -13,6 +13,23 @@
     flex-direction: column;
     align-items: start;
     z-index: -10000;
+}
+
+.therail, .park{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.therail.animate-in {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.park.animate-in {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.5s;
 }
 
 
@@ -47,6 +64,18 @@
     transform-origin: bottom right;
 }
   
+.carousel-image.load-arc-enter {
+    opacity: 0;
+    transform: translate(-200px, 300px) rotate(12deg);
+    animation: loadArcEnter 0.6s ease-out forwards;
+}
+
+.loading-hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+
 @keyframes arcExit {
     to {
       transform: translate(-300px, 200px) rotate(-12deg);
@@ -65,6 +94,16 @@
     }
 }
 
+@keyframes loadArcEnter {
+    from {
+      transform: translate(-200px, 300px) rotate(12deg);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+}
 
 .parallax-layer{
     display: flex;
@@ -83,12 +122,12 @@
     z-index: 100;
     text-align: left;
     width: 20vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     align-self: flex-end;
-    margin-bottom: 2em;
-    transform: translateY(30px);
-    animation: slideUpHero 0.5s ease forwards;
-    animation-delay: 0.2s;
+    margin-bottom: 4em;
+    transform: translateY(50px);
+    animation: slideUpHero 0.6s ease forwards;
+    animation-delay: 0.5s;
 }
 
 @keyframes slideUpHero {
@@ -139,20 +178,33 @@
 .visit-heading{
     position: absolute;
     top: -90px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     font-size: 3.5rem;
     left: 60vw;
     text-align: right;
 }
 
-.noble-img{
+.media-wrapper {
     width: 35%;
+    max-width: 100%;
     border-radius: 10px;
 }
 
+.noble-img, .noble-video {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.noble-video {
+    display: none;
+    object-fit: cover;
+}
+
+
 .noble-address{
     width: 10%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -177,11 +229,16 @@
     display: flex;
     flex-direction: column;
     gap: 3.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     font-size: 1.5rem;
     position: absolute;
     left: 65%;
     top: 28%;
+}
+
+.noble-direction span:hover{
+    color: #00d65f;
+    cursor: pointer;
 }
 
 .wheel-icon{
@@ -205,7 +262,7 @@
     border-radius: 10px;
     white-space: nowrap;
     font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -242,19 +299,46 @@
 .callowhill{
     position: relative;
     min-height: 450px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 0 10%;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.callow-img{
+.callowhill .image-section {
     width: 35%;
     border-radius: 10px;
-    float: right;
-    margin-right: 10%;
-    overflow: hidden;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
+.callow-img, .callow-video {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.callow-video {
+    display: none;
+    object-fit: cover;
+}
+
+
+.section2-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
 
 .callow-address{
     width: 20%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -279,13 +363,17 @@
     display: flex;
     flex-direction: column;
     gap: 3.2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     font-size: 1.5rem;
     position: absolute;
     left: 39%;
     top: 28%;
 }
 
+.callow-direction span:hover{
+    color: #00d65f;
+    cursor: pointer;
+}
 
 .stair-icon{
     width: 80px;

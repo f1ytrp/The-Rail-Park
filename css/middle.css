@@ -7,8 +7,12 @@
 .greenway-section h1{
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk-semibold';
     word-wrap: break-word;
+}
+
+.greenway-section p{
+    font-family: 'Armin-Grotesk';
 }
 
 .highlight-text{
@@ -34,19 +38,15 @@
     z-index: 10;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translate(-50%, -50%);
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .subtext {
     font-size: 1.8rem;
     color: #111;
     margin-top: 2rem;
-}
-
-.video-preview {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
   
 .hover-video:hover .video-preview {
@@ -57,10 +57,9 @@
 
 
 
-
 .middle-section{
     padding-top: 10em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
 }
 .viaduct{
     display: flex;

@@ -8,13 +8,29 @@ html, body {
     overflow-x: hidden;
 }
 
+
+@font-face {
+    font-family: 'Armin-Grotesk';
+    src: url('../fonts/armin-grotesk/Fontspring-DEMO-armingrotesk-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Armin-Grotesk-semibold';
+    src: url('../fonts/armin-grotesk/Fontspring-DEMO-armingrotesk-semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Mongoose';
+    src: url('../fonts/Mongoose-Font/Mongoose-Regular.otf') format('opentype');
+}
+
 .nav-bar{
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
     text-align: center;
     font-size: 1.1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     padding-top: 40px;
     position: relative;
     z-index: 100;
@@ -183,8 +199,17 @@ html, body {
     flex-direction: column;
     list-style: none;
     gap: 2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     font-size: 1rem;
+    cursor: pointer;
+}
+
+.hamburger1 li{
+    transition: 0.2s ease-out;
+}
+
+.hamburger1 li:hover{
+    color: #04C75C;
 }
 
 .hamburger2, .hamburger3{
@@ -195,7 +220,7 @@ html, body {
 }
 
 .hamburger2 li, .hamburger3 li{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Armin-Grotesk';
     font-size: 1.5rem;
 }
 
@@ -205,15 +230,21 @@ html, body {
 }
 
 .hamburger2 h1, .hamburger3 h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 4rem;
-    letter-spacing: -0.2rem;
+    font-family: 'Mongoose';
+    font-size: 5.5rem;
+    transition: 0.2s ease-out;
+    cursor: pointer;
 }
 
 
+.hamburger2 h1:hover, .hamburger3 h1:hover{
+    color: #04C75C;
+    transform: translateX(10px);
+}
+
 .hamburger-footer{
     background-color: #131313;
-    margin-top: -250px;
+    margin-top: -100px;
     padding-bottom: 6em;
     color: white;
     display: flex;
