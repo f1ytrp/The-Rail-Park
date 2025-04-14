@@ -1,6 +1,7 @@
 //Video-Playing
 const hoverArea = document.querySelector('.hover-video');
 const video = document.querySelector('.video-preview');
+const greenwaySection = document.querySelector('.greenway-section');
 
 let mouseX = 0;
 let mouseY = 0;
