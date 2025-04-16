@@ -18,20 +18,26 @@
 .therail, .park{
     opacity: 0;
     transform: translateY(30px);
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .therail.animate-in {
-    opacity: 1;
-    transform: translateY(0px);
+    animation: slideUp 0.4s ease-out forwards;
 }
 
 .park.animate-in {
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: 0.5s;
+    animation: slideUp 0.4s ease-out 0.2s forwards;
 }
 
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .carousel-image{
     width: 48vw;
@@ -194,6 +200,7 @@
     width: 100%;
     border-radius: 10px;
     display: block;
+    transition: opacity 0.8s ease;
 }
 
 .noble-video {

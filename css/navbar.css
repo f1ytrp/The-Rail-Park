@@ -138,8 +138,26 @@ html, body {
 .ham-nav{
     display: flex;
     justify-content: center;
-    gap: 11em;
+    gap: 16.5em;
     padding-bottom: 2em;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    background-color: #131313;
+    padding: 0.3em 0.5em;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 0.5em;
+    cursor: pointer;
+    filter: invert(1);
+    flex-shrink: 0;
 }
 
 .sidemenu-nav{
@@ -171,12 +189,15 @@ html, body {
 }
 
 .search-ham{
-    width: 40%;
+    /* width: 40%; */
+    flex: 1;
     outline: none;
     background-color: #131313;
     color: rgb(255, 255, 255);
     border: none;
     font-size: 2rem;
+    padding-left: 0.5em;
+    min-width: 0;
 }
 
 .ham-btn:hover{

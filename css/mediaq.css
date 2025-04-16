@@ -297,6 +297,46 @@
         justify-content: space-between;
     }
 
+    .search-bar-mob {
+        display: flex;
+        align-items: center;
+        background-color: #131313;
+        padding: 1em 0.5em;
+        width: 100%;
+        max-width: 90%;
+        margin: 1em auto 0 auto;
+    }
+    
+    .search-icon-mob {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        filter: invert(1);
+    }
+    
+    .search-ham {
+        flex: 1;
+        background-color: #131313;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 1.7rem;
+        padding-left: 0.5em;
+        min-width: 0;
+    }
+    
+    .cross{
+        padding-left: 2.5em;
+        cursor: pointer;
+        width: 4.5rem;
+    }
+
+    .logo-ham{
+        width: 5rem;
+        padding-right: 2.5em;
+        margin-top: 2em;
+    }
+
     .hamnavmob hr{
         display: block;
         height: 0.5px;

@@ -75,9 +75,15 @@ window.addEventListener("load", () => {
 
 
 window.addEventListener("load", () => {
-  document.querySelector(".therail").classList.add("animate-in");
-  document.querySelector(".park").classList.add("animate-in");
+  const therail = document.querySelector(".therail");
+  const park = document.querySelector(".park");
+
+  requestAnimationFrame(() => {
+    therail.classList.add("animate-in");
+    park.classList.add("animate-in");
+  });
 });
+
 
 
 
