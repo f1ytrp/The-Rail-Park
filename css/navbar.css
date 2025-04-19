@@ -92,7 +92,12 @@ html.no-scroll {
     transition: transform 0.4s ease, background-color 0.3s ease-in-out;
     border-radius: 2px;
 }
-  
+
+.hamburger-icon:hover .line {
+    background-color: #04C75C;
+    transition: 0.2s ease-out;
+}
+
 .hamburger-icon.open .top-line {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -191,11 +196,6 @@ html.no-scroll {
     padding: 3em;
 }
 
-.cross{
-    width: 30px;
-    filter: invert(100%) sepia(1%) saturate(5%) hue-rotate(19deg) brightness(105%) contrast(102%);
-    cursor: pointer;
-}
 
 .ham-btn{
     background-color: #04C75C;

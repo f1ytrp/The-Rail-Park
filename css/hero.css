@@ -175,7 +175,11 @@
     z-index: 200;
 }
 
-
+.left-arrow:hover, .right-arrow:hover{
+    filter: invert(56%) sepia(48%) saturate(3437%) hue-rotate(110deg) brightness(99%) contrast(97%);
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
+}
 
 .noble-entrance{
     position: relative;
