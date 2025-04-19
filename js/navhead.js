@@ -1,34 +1,4 @@
-//navbar
-const menuBtn = document.getElementById("menuBtn");
-const hamburgerOverlay = document.getElementById("hamburgerOverlay");
-const navBar = document.getElementById("navbar");
-
-let isOpen = false;
-
-menuBtn.addEventListener("click", () => {
-    isOpen = !isOpen;
-
-    if (isOpen) {
-        hamburgerOverlay.style.display = "block";
-        document.body.style.overflow = "hidden";
-
-        navBar.classList.add("fixed");
-        navBar.classList.add("hide-elements");
-
-        menuBtn.classList.add("open");
-    } else {
-        hamburgerOverlay.style.display = "none";
-        document.body.style.overflow = "auto";
-
-        navBar.classList.remove("fixed");
-        navBar.classList.remove("hide-elements");
-
-        menuBtn.classList.remove("open");
-    }
-});
-
-
-
+// Navigation Bar Hide on Scroll
 const navbar = document.getElementById("navbar");
 const navSpacer = document.getElementById("nav-spacer");
 

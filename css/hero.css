@@ -134,6 +134,7 @@
     transform: translateY(50px);
     animation: slideUpHero 0.6s ease forwards;
     animation-delay: 0.5s;
+    opacity: 0;
 }
 
 @keyframes slideUpHero {
